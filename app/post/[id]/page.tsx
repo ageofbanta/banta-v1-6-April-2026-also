@@ -116,7 +116,7 @@ function mergeSupabaseAndLocalPosts(
     localMap.delete(supabasePost.id);
   }
 
-  for (const remainingLocal of localMap.values()) {
+  for (const remainingLocal of Array.from(localMap.values())) {
     merged.push(remainingLocal);
   }
 
