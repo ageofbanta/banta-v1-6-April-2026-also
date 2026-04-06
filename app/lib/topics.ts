@@ -104,7 +104,7 @@ export function topicsMatch(a: string, b: string): boolean {
   const setB = new Set(wordsB);
 
   let overlap = 0;
-  for (const word of setA) {
+  for (const word of Array.from(setA)) {
     if (setB.has(word)) overlap += 1;
   }
 
